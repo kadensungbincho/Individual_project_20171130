@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block header %}Seoul Market Analysis{% endblock %}
+{% block subheader %}Focusing on Franchise Business{% endblock %}
+
+
+{% block content %}
+    <table class="map_table" id='mapTable'>
+        <div class="mapNav">
+            <p><a href="{{ url_for('show_map', filename='large_area.html') }}" target="map_iframe">Large</a>
+            <a href="{{ url_for('show_map', filename='medium_area.html') }}" target="map_iframe">Medium</a>
+            <a href="{{ url_for('show_map', filename='small_area.html') }}" target="map_iframe">Small</a>
+            <a href="{{ url_for('show_map', filename='dense_large_area.html') }}" target="map_iframe">Dense Large</a>
+            <a href="{{ url_for('show_map', filename='dense_medium_area.html') }}" target="map_iframe">Dense Medium</a>
+            <a href="{{ url_for('show_map', filename='subway_available.html') }}" target="map_iframe">Subway Available</a>
+            <a href="{{ url_for('show_map', filename='subway_non_available.html') }}" target="map_iframe">Subway Non-Available</a></p>            
+        </div>
+        <div class="map_div">
+            <iframe class="map_iframe" id="map_iframe" src="{{ url_for('show_map', filename='large_area.html') }}" name="map_iframe">map</iframe>
+        </div>
+    </table>
+    
+    <hr>
+{% endblock %}

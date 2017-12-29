@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_0df092c426ab45989c296143ca7f1258 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    
+            <style> #vega_94522a699ae64d438448de920c9fc606 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
+    
+            <style> #vega_b0c50c1dfa634e2ea4bb3db1c1e8fae2 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_f543c54b7e29448a9d1ba922eab02c4f {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_9ea361708b1f48169aca161ac8560ea2 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_d8fb0793f5ef4af2bbcb0b8f41f1ca6c {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_4e94fc766d824133a6dc71ff821b8aaa {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_7201813c266243758c9d93620b707a03 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_d866a49667d34458885e5a384eda4354 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_93989c34b23f43dfbfc7cd2f8b5841f5 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_53316e56120a4c16afefda3078244e3f {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_e5eb85530473445ebedb522c7a5045bb {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_6a390ee165124ffe8bc71d6c98a8eab6 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_261dce9e7bcb429f9707fc792752bdb5 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_8c72c8c565f9406da9fc07450e011c07 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_9f75888088164a489d50c1ecd6460268 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_9c1622a9145843799d334567bf859ed8 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_b7c9fd23d33c40c5ab0e60c829475592 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_eea2830a838d4ce797851b0df0ed02db {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_ae329a4fa0c74413bbeffe86593d0923 {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+    
+            <style> #vega_84429780fab54546b933fc8660421c0f {
+                position : relative;
+                width : 400.0px;
+                height: 270.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_0df092c426ab45989c296143ca7f1258" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_0df092c426ab45989c296143ca7f1258 = L.map(
+                                  'map_0df092c426ab45989c296143ca7f1258',
+                                  {center: [37.54,126.99],
+                                  zoom: 11,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            L.control.scale().addTo(map_0df092c426ab45989c296143ca7f1258);
+        
+    
+            var tile_layer_99842ad61bd4435caccc61435f666361 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_0df092c426ab45989c296143ca7f1258);
+        
+    
+
+            
+
+                var geo_json_8f845943c6b04ca087e385170f6a8392 = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[[127.1549475204363, 37.512175229616425], [127.1461032821273, 37.51603121515273], [127.14575912233846, 37.51645222243826], [127.14505907699913, 37.51931251147113], [127.14506709910495, 37.51960090698256], [127.16632744409895, 37.53143956690895], [127.16655639411884, 37.52611595133653], [127.16473968897601, 37.522643065998366], [127.15792244385445, 37.51418780989371], [127.1549475204363, 37.512175229616425]]], "type": "Polygon"}, "id": "25", "properties": {"area": 1.9371340649851014, "centroid": [127.15649074687808, 37.520895706130545], "count": 21, "density": 0.09224447928500483, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.00841797627399, 37.424156467319996], [127.00811070387395, 37.42432509079347], [127.00329238982421, 37.428988090732666], [127.00583861607971, 37.43808318799696], [127.02468694536272, 37.43724004508955], [127.02463816833854, 37.4366449436978], [127.02402363983592, 37.43610824626781], [127.02240244265575, 37.434779302663195], [127.00920626081965, 37.42435229951727], [127.00841797627399, 37.424156467319996]]], "type": "Polygon"}, "id": "20", "properties": {"area": 1.6548122804532204, "centroid": [127.01193651298829, 37.43255364395586], "count": 33, "density": 0.050145826680400615, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.05634380316637, 37.44401169126467], [127.05080206382391, 37.45150016955409], [127.05221774417826, 37.462017866294026], [127.06402764595086, 37.45587667277836], [127.06409541961288, 37.45406608100669], [127.05656968938692, 37.44402250516445], [127.05634380316637, 37.44401169126467]]], "type": "Polygon"}, "id": "15", "properties": {"area": 1.3409484473268896, "centroid": [127.0566428704522, 37.4534050613366], "count": 27, "density": 0.049664757308403314, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.9637556984138, 37.592782196953834], [126.96371003520389, 37.592808826973055], [126.95520221016805, 37.60118548250226], [126.9550319455236, 37.602832858682305], [126.95645290317505, 37.608936386944144], [126.9748582643235, 37.61713488864867], [126.97806628044745, 37.61281975487261], [126.97547934369848, 37.60819306250698], [126.96624517301348, 37.59372307973248], [126.96559983047915, 37.5928974870263], [126.9637556984138, 37.592782196953834]]], "type": "Polygon"}, "id": "17", "properties": {"area": 2.973109988571701, "centroid": [126.96596803827934, 37.605432575201725], "count": 69, "density": 0.04308855055901016, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.18264917226357, 37.54640302403274], [127.18323344426828, 37.55508419843037], [127.18473907040884, 37.55713098010198], [127.19032269755493, 37.56201705765486], [127.19056554533144, 37.561541165883185], [127.19068359929243, 37.56109144971916], [127.19111919789971, 37.558490396949296], [127.19172444830348, 37.5464654935358], [127.18264917226357, 37.54640302403274]]], "type": "Polygon"}, "id": "24", "properties": {"area": 1.0337782096190997, "centroid": [127.18752558335207, 37.55270392313891], "count": 25, "density": 0.041351128384763985, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.00790761915717, 37.44399348613288], [126.99769238733924, 37.448160279966395], [126.99789231528422, 37.450117265144584], [127.0014981711325, 37.454328680491166], [127.02279312112015, 37.445577211867146], [127.00790761915717, 37.44399348613288]]], "type": "Polygon"}, "id": "23", "properties": {"area": 1.2231432866284366, "centroid": [127.007791585067, 37.448311510233005], "count": 30, "density": 0.040771442887614556, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.10577977895045, 37.454046436964106], [127.0880933974749, 37.47154502128891], [127.09475833443145, 37.47384891563178], [127.10707111186773, 37.46426522394371], [127.10745938269837, 37.46393476483705], [127.1071270910385, 37.45860698486605], [127.10647469237524, 37.45453826641711], [127.10577977895045, 37.454046436964106]]], "type": "Polygon"}, "id": "22", "properties": {"area": 1.5126103188802682, "centroid": [127.09947601577979, 37.465082639506036], "count": 44, "density": 0.034377507247278824, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.8246601039303, 37.60494022976468], [126.82075012495207, 37.608703518928145], [126.83263671068761, 37.61484951701707], [126.83329355787218, 37.614856013351435], [126.85010096712409, 37.61494891606443], [126.85141550303024, 37.61490765763422], [126.85171314036614, 37.6147033199332], [126.85152601923248, 37.6143501012892], [126.8246601039303, 37.60494022976468]]], "type": "Polygon"}, "id": "1", "properties": {"area": 1.3299147524061004, "centroid": [126.83405472310771, 37.61104477628731], "count": 50, "density": 0.026598295048122007, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.87015880421893, 37.593355950463106], [126.86538169301981, 37.599229845103004], [126.86536421351398, 37.59963513730096], [126.86768599168232, 37.60484732634088], [126.86940389689218, 37.60433219392121], [126.8735523218474, 37.60110115117949], [126.87539275727126, 37.59920853390296], [126.87015880421893, 37.593355950463106]]], "type": "Polygon"}, "id": "11", "properties": {"area": 0.6059156255060413, "centroid": [126.869963026339, 37.59936342170419], "count": 24, "density": 0.025246484396085053, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.11580049038328, 37.63935940381571], [127.10703232756167, 37.642050529027046], [127.10426776654381, 37.642975656857196], [127.10717201198916, 37.64931391377961], [127.11959331053987, 37.65976914325747], [127.12137014494333, 37.659025524739526], [127.12250694157217, 37.64814049824655], [127.12119660626082, 37.64297682941186], [127.11947701123128, 37.64178365251042], [127.11580049038328, 37.63935940381571]]], "type": "Polygon"}, "id": "14", "properties": {"area": 2.172260466158245, "centroid": [127.11499875836485, 37.648263095993784], "count": 106, "density": 0.020493023265643822, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.77042833551988, 37.51652011201765], [126.76319290964409, 37.517642927765536], [126.76309067391907, 37.51766888786106], [126.76214867273721, 37.51854202384965], [126.76880292182815, 37.5259459328535], [126.77039573603693, 37.52608867174136], [126.77590974572865, 37.522352634677844], [126.77561655518844, 37.518141799770625], [126.77553885675937, 37.51805089151389], [126.77095886268258, 37.51658870599936], [126.77042833551988, 37.51652011201765]]], "type": "Polygon"}, "id": "112", "properties": {"area": 0.8350442826529667, "centroid": [126.76978414892456, 37.520699583360646], "count": 44, "density": 0.01897827915120379, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.0833301772962, 37.48110442291918], [127.07970776923112, 37.482373783657195], [127.07951129118717, 37.48364274176134], [127.08234581608968, 37.485782272482545], [127.08355669516368, 37.48570156578825], [127.09013464111597, 37.485013541025666], [127.09437460022916, 37.48410000815567], [127.0948284720114, 37.48209412964936], [127.0918198518745, 37.48124206938748], [127.0833301772962, 37.48110442291918]]], "type": "Polygon"}, "id": "56", "properties": {"area": 0.5340847569071809, "centroid": [127.08693401977489, 37.483238111944374], "count": 29, "density": 0.018416715755420032, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.93341831857794, 37.580212883038755], [126.93321327146681, 37.58030113318459], [126.93244170306943, 37.58121320896356], [126.93238830271315, 37.58733072140174], [126.93349524837849, 37.59148546470927], [126.93447756581843, 37.592476458828514], [126.93776295135362, 37.58997417981243], [126.94055028510856, 37.5842506581032], [126.93594466027349, 37.58089343623051], [126.93341831857794, 37.580212883038755]]], "type": "Polygon"}, "id": "80", "properties": {"area": 0.6350290697685333, "centroid": [126.93565724992033, 37.58592513198213], "count": 39, "density": 0.016282796660731624, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.05372196439481, 37.698111294073605], [127.04653391914549, 37.702441363580434], [127.04509982749511, 37.707268237407824], [127.04495255403586, 37.70990703239554], [127.04510125872339, 37.710692123799255], [127.04709011470595, 37.71125783674953], [127.04780259968035, 37.71141676636504], [127.05756946174417, 37.70680092394352], [127.05823606575436, 37.70431042186323], [127.05462824890111, 37.699073646709216], [127.05372196439481, 37.698111294073605]]], "type": "Polygon"}, "id": "16", "properties": {"area": 1.0674577411641915, "centroid": [127.05122061102168, 37.70511562441356], "count": 75, "density": 0.014232769882189219, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.88332780815675, 37.429384383765154], [126.87688691106179, 37.43320687972968], [126.87482622847689, 37.44103540519506], [126.87941588517577, 37.442439591229245], [126.88794342700835, 37.43587039993167], [126.8872343915921, 37.43415173397547], [126.88340675440983, 37.42939414004541], [126.88332780815675, 37.429384383765154]]], "type": "Polygon"}, "id": "36", "properties": {"area": 0.968782863125719, "centroid": [126.88103352797253, 37.43612145860147], "count": 69, "density": 0.014040331349648102, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.03815883503866, 37.611540810653175], [127.03788077883621, 37.61378211767869], [127.04598648531895, 37.62209238158417], [127.04817240436685, 37.623011067444516], [127.04837686422243, 37.622967664924204], [127.04849082295681, 37.622914521963324], [127.04881245502264, 37.622565712323606], [127.05217653178113, 37.61724064373673], [127.05182565143612, 37.6154357568597], [127.05076402513458, 37.61340890518768], [127.05040435776516, 37.61318976325449], [127.03815883503866, 37.611540810653175]]], "type": "Polygon"}, "id": "140", "properties": {"area": 0.9358854030237348, "centroid": [127.04568903867204, 37.61645448539978], "count": 68, "density": 0.013763020632701982, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.02305860457896, 37.45818518837742], [127.02215022229758, 37.458502055347005], [127.02147223079034, 37.4654255560338], [127.02214919974821, 37.46726030039656], [127.02468979371794, 37.47096660876249], [127.02507272274622, 37.47107789534755], [127.02589931326591, 37.47097658608445], [127.02746547926307, 37.46876388306579], [127.0270922642244, 37.462669680213764], [127.02670101723804, 37.461459044230516], [127.02305860457896, 37.45818518837742]]], "type": "Polygon"}, "id": "28", "properties": {"area": 0.5313985762841734, "centroid": [127.02448273058779, 37.46476093619216], "count": 44, "density": 0.01207724037009485, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.87603990747829, 37.6472480807454], [126.87324536627855, 37.65070835391849], [126.87619291735133, 37.65363774258286], [126.87689957939266, 37.654122011187546], [126.88353623395899, 37.653653413451146], [126.88466307932394, 37.65029427163601], [126.8841488690579, 37.648307171514666], [126.88403030270395, 37.64790059224091], [126.87603990747829, 37.6472480807454]]], "type": "Polygon"}, "id": "8", "properties": {"area": 0.5876180393391507, "centroid": [126.87930218174843, 37.65065594093791], "count": 49, "density": 0.011992204884472463, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[126.76852396757111, 37.59241131114992], [126.76493498646923, 37.59375236135864], [126.76687103275826, 37.60062932887545], [126.76933939341549, 37.60615128152322], [126.7736069103983, 37.606970581153796], [126.7789471964214, 37.607296264187205], [126.76852396757111, 37.59241131114992]]], "type": "Polygon"}, "id": "5", "properties": {"area": 0.9347341298560493, "centroid": [126.77089044913588, 37.60077744013971], "count": 78, "density": 0.011983770895590376, "highlight": {}, "style": {}}, "type": "Feature"}, {"geometry": {"coordinates": [[[127.05160814800536, 37.62185837885899], [127.04980957683638, 37.62610579410707], [127.05063631462612, 37.62879752501254], [127.05856848801182, 37.63314098491178], [127.05859114511017, 37.63314116569537], [127.0588520426363, 37.63311621615445], [127.06103212003094, 37.63183609970014], [127.06272861888702, 37.6293627386836], [127.06266219542694, 37.62653296744811], [127.05160814800536, 37.62185837885899]]], "type": "Polygon"}, "id": "90", "properties": {"area": 0.8622295346685215, "centroid": [127.05626066207513, 37.627630828579036], "count": 76, "density": 0.011345125456164756, "highlight": {}, "style": {}}, "type": "Feature"}], "type": "FeatureCollection"}
+                    
+                    ).addTo(map_0df092c426ab45989c296143ca7f1258);
+                geo_json_8f845943c6b04ca087e385170f6a8392.setStyle(function(feature) {return feature.properties.style;});
+
+            
+    
+            var regular_polygon_marker_6e67abe9be8740e4a3f1d22869e355cf = new L.RegularPolygonMarker(
+                new L.LatLng(37.520895706130545,127.15649074687808),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    function vega_parse(spec, div) {
+            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
+    
+            var popup_59514c78c6fe45a0a19352c48af80d55 = L.popup({maxWidth: '400'});
+
+            
+                var vega_94522a699ae64d438448de920c9fc606 = $('             <div id="vega_94522a699ae64d438448de920c9fc606"></div>             ')[0];
+                popup_59514c78c6fe45a0a19352c48af80d55.setContent(vega_94522a699ae64d438448de920c9fc606);
+            
+
+            regular_polygon_marker_6e67abe9be8740e4a3f1d22869e355cf.bindPopup(popup_59514c78c6fe45a0a19352c48af80d55);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 21", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 11.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 3.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 2.0}, {"col": "count", "idx": "\uc81c\uc870\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc784\ub300,\ub300\uc5ec", "val": 1.0}, {"col": "count", "idx": "\uac74\uc124\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 0.0}, {"col": "count", "idx": "\ubc18\ub824\ub3d9\ubb3c", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}, {"col": "count", "idx": "\uc190\ud574\uc0ac\uc815", "val": 0.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_94522a699ae64d438448de920c9fc606);
+            
+            
+        
+    
+            var regular_polygon_marker_1b4b36c44709429f8a07630a30406ee8 = new L.RegularPolygonMarker(
+                new L.LatLng(37.43255364395586,127.01193651298829),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_7ff259a211474f27bd2dd22445141e28 = L.popup({maxWidth: '400'});
+
+            
+                var vega_b0c50c1dfa634e2ea4bb3db1c1e8fae2 = $('             <div id="vega_b0c50c1dfa634e2ea4bb3db1c1e8fae2"></div>             ')[0];
+                popup_7ff259a211474f27bd2dd22445141e28.setContent(vega_b0c50c1dfa634e2ea4bb3db1c1e8fae2);
+            
+
+            regular_polygon_marker_1b4b36c44709429f8a07630a30406ee8.bindPopup(popup_7ff259a211474f27bd2dd22445141e28);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 33", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 9.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 8.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 5.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 5.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 1.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 1.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}, {"col": "count", "idx": "\ubc18\ub824\ub3d9\ubb3c", "val": 0.0}, {"col": "count", "idx": "\uc190\ud574\uc0ac\uc815", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_b0c50c1dfa634e2ea4bb3db1c1e8fae2);
+            
+            
+        
+    
+            var regular_polygon_marker_76969a00ce44494eac73d1d6315551b3 = new L.RegularPolygonMarker(
+                new L.LatLng(37.4534050613366,127.0566428704522),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_b435c2072c834940aae7fa357e01378e = L.popup({maxWidth: '400'});
+
+            
+                var vega_f543c54b7e29448a9d1ba922eab02c4f = $('             <div id="vega_f543c54b7e29448a9d1ba922eab02c4f"></div>             ')[0];
+                popup_b435c2072c834940aae7fa357e01378e.setContent(vega_f543c54b7e29448a9d1ba922eab02c4f);
+            
+
+            regular_polygon_marker_76969a00ce44494eac73d1d6315551b3.bindPopup(popup_b435c2072c834940aae7fa357e01378e);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 27", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 11.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 4.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 3.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 3.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 2.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uad50\uc721,\ud559\ubb38", "val": 1.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 1.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc190\ud574\uc0ac\uc815", "val": 0.0}, {"col": "count", "idx": "\ubc18\ub824\ub3d9\ubb3c", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_f543c54b7e29448a9d1ba922eab02c4f);
+            
+            
+        
+    
+            var regular_polygon_marker_e41b4c443fba4154a2dfc00086360fd5 = new L.RegularPolygonMarker(
+                new L.LatLng(37.605432575201725,126.96596803827934),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_ab327f58fb8f431b86d3e5cde8f4b063 = L.popup({maxWidth: '400'});
+
+            
+                var vega_9ea361708b1f48169aca161ac8560ea2 = $('             <div id="vega_9ea361708b1f48169aca161ac8560ea2"></div>             ')[0];
+                popup_ab327f58fb8f431b86d3e5cde8f4b063.setContent(vega_9ea361708b1f48169aca161ac8560ea2);
+            
+
+            regular_polygon_marker_e41b4c443fba4154a2dfc00086360fd5.bindPopup(popup_ab327f58fb8f431b86d3e5cde8f4b063);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 69", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 26.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 13.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 11.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 8.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 2.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 1.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uac74\uc124\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc218\uc120", "val": 0.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_9ea361708b1f48169aca161ac8560ea2);
+            
+            
+        
+    
+            var regular_polygon_marker_2a78f42eade94d2b9bb96cfb6630995c = new L.RegularPolygonMarker(
+                new L.LatLng(37.55270392313891,127.18752558335207),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_95a7b5a2b560475b9921f3562ec26ab6 = L.popup({maxWidth: '400'});
+
+            
+                var vega_d8fb0793f5ef4af2bbcb0b8f41f1ca6c = $('             <div id="vega_d8fb0793f5ef4af2bbcb0b8f41f1ca6c"></div>             ')[0];
+                popup_95a7b5a2b560475b9921f3562ec26ab6.setContent(vega_d8fb0793f5ef4af2bbcb0b8f41f1ca6c);
+            
+
+            regular_polygon_marker_2a78f42eade94d2b9bb96cfb6630995c.bindPopup(popup_95a7b5a2b560475b9921f3562ec26ab6);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 25", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 7.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 7.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 3.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 2.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 1.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\ubbf8\uc6a9", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_d8fb0793f5ef4af2bbcb0b8f41f1ca6c);
+            
+            
+        
+    
+            var regular_polygon_marker_8daef7f9eae741878b0ebe35332e685c = new L.RegularPolygonMarker(
+                new L.LatLng(37.448311510233005,127.007791585067),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_adcd86496141458d82ff4b25ba323b92 = L.popup({maxWidth: '400'});
+
+            
+                var vega_4e94fc766d824133a6dc71ff821b8aaa = $('             <div id="vega_4e94fc766d824133a6dc71ff821b8aaa"></div>             ')[0];
+                popup_adcd86496141458d82ff4b25ba323b92.setContent(vega_4e94fc766d824133a6dc71ff821b8aaa);
+            
+
+            regular_polygon_marker_8daef7f9eae741878b0ebe35332e685c.bindPopup(popup_adcd86496141458d82ff4b25ba323b92);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 30", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 19.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 3.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 2.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 1.0}, {"col": "count", "idx": "\uc2dd\ub8cc\ud488", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 1.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 1.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc218\uc120", "val": 0.0}, {"col": "count", "idx": "\uc218\ub9ac,AS", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 0.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\ub808\ud06c\ub808\uc774\uc158\ud559\uc6d0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_4e94fc766d824133a6dc71ff821b8aaa);
+            
+            
+        
+    
+            var regular_polygon_marker_59fc8d561b3348c1b75c06c478927536 = new L.RegularPolygonMarker(
+                new L.LatLng(37.465082639506036,127.09947601577979),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_09875cc42aec4952a1c6c54837075125 = L.popup({maxWidth: '400'});
+
+            
+                var vega_7201813c266243758c9d93620b707a03 = $('             <div id="vega_7201813c266243758c9d93620b707a03"></div>             ')[0];
+                popup_09875cc42aec4952a1c6c54837075125.setContent(vega_7201813c266243758c9d93620b707a03);
+            
+
+            regular_polygon_marker_59fc8d561b3348c1b75c06c478927536.bindPopup(popup_09875cc42aec4952a1c6c54837075125);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 44", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 12.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 12.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 3.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 3.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 2.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 2.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\ub3c4\uc11c\uad00", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uad11\uace0,\ub9c8\ucf00\ud305", "val": 1.0}, {"col": "count", "idx": "\uc218\uc120", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_7201813c266243758c9d93620b707a03);
+            
+            
+        
+    
+            var regular_polygon_marker_87cb15ca141c4761b93c14fd250609a6 = new L.RegularPolygonMarker(
+                new L.LatLng(37.61104477628731,126.83405472310771),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_ab8244c6c54e49e0a2bc6e4853831989 = L.popup({maxWidth: '400'});
+
+            
+                var vega_d866a49667d34458885e5a384eda4354 = $('             <div id="vega_d866a49667d34458885e5a384eda4354"></div>             ')[0];
+                popup_ab8244c6c54e49e0a2bc6e4853831989.setContent(vega_d866a49667d34458885e5a384eda4354);
+            
+
+            regular_polygon_marker_87cb15ca141c4761b93c14fd250609a6.bindPopup(popup_ab8244c6c54e49e0a2bc6e4853831989);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 50", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 12.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 10.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 7.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 3.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 3.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 3.0}, {"col": "count", "idx": "\uc220\uc9d1", "val": 2.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 2.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 2.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_d866a49667d34458885e5a384eda4354);
+            
+            
+        
+    
+            var regular_polygon_marker_0c79f3047cad4e08bcf755a8e94610e0 = new L.RegularPolygonMarker(
+                new L.LatLng(37.59936342170419,126.869963026339),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_9abd65d388954246b43c5b6875e1b46d = L.popup({maxWidth: '400'});
+
+            
+                var vega_93989c34b23f43dfbfc7cd2f8b5841f5 = $('             <div id="vega_93989c34b23f43dfbfc7cd2f8b5841f5"></div>             ')[0];
+                popup_9abd65d388954246b43c5b6875e1b46d.setContent(vega_93989c34b23f43dfbfc7cd2f8b5841f5);
+            
+
+            regular_polygon_marker_0c79f3047cad4e08bcf755a8e94610e0.bindPopup(popup_9abd65d388954246b43c5b6875e1b46d);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 24", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 9.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 5.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 2.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 2.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 1.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 0.0}, {"col": "count", "idx": "\ubc18\ub824\ub3d9\ubb3c", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_93989c34b23f43dfbfc7cd2f8b5841f5);
+            
+            
+        
+    
+            var regular_polygon_marker_1ce309f827834c7992576bfef4fc02a8 = new L.RegularPolygonMarker(
+                new L.LatLng(37.648263095993784,127.11499875836485),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_09643cf225b84b258d7e0d6099671ca7 = L.popup({maxWidth: '400'});
+
+            
+                var vega_53316e56120a4c16afefda3078244e3f = $('             <div id="vega_53316e56120a4c16afefda3078244e3f"></div>             ')[0];
+                popup_09643cf225b84b258d7e0d6099671ca7.setContent(vega_53316e56120a4c16afefda3078244e3f);
+            
+
+            regular_polygon_marker_1ce309f827834c7992576bfef4fc02a8.bindPopup(popup_09643cf225b84b258d7e0d6099671ca7);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 106", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 25.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 22.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 17.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 9.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 5.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 5.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 4.0}, {"col": "count", "idx": "\uc220\uc9d1", "val": 3.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 3.0}, {"col": "count", "idx": "\uad50\uc721,\ud559\ubb38", "val": 3.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 2.0}, {"col": "count", "idx": "\uc548\uacbd\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 1.0}, {"col": "count", "idx": "\uc911\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 1.0}, {"col": "count", "idx": "\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc190\ud574\uc0ac\uc815", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_53316e56120a4c16afefda3078244e3f);
+            
+            
+        
+    
+            var regular_polygon_marker_0f31c4b4ee744e82ada582eb36bd4b8d = new L.RegularPolygonMarker(
+                new L.LatLng(37.520699583360646,126.76978414892456),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_45ef84ab88af464881d318f53836c8c1 = L.popup({maxWidth: '400'});
+
+            
+                var vega_e5eb85530473445ebedb522c7a5045bb = $('             <div id="vega_e5eb85530473445ebedb522c7a5045bb"></div>             ')[0];
+                popup_45ef84ab88af464881d318f53836c8c1.setContent(vega_e5eb85530473445ebedb522c7a5045bb);
+            
+
+            regular_polygon_marker_0f31c4b4ee744e82ada582eb36bd4b8d.bindPopup(popup_45ef84ab88af464881d318f53836c8c1);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 44", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 18.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 9.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 4.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 2.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 2.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 2.0}, {"col": "count", "idx": "\uc911\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uae30\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uad50\uc721,\ud559\ubb38", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc81c\uc870\uc5c5", "val": 1.0}, {"col": "count", "idx": "\ud654\ubb3c\uc6b4\uc1a1", "val": 1.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_e5eb85530473445ebedb522c7a5045bb);
+            
+            
+        
+    
+            var regular_polygon_marker_19334943968f44d98fba7c8d9600f69b = new L.RegularPolygonMarker(
+                new L.LatLng(37.483238111944374,127.08693401977489),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_78792890f9ee483fa295b2740540f753 = L.popup({maxWidth: '400'});
+
+            
+                var vega_6a390ee165124ffe8bc71d6c98a8eab6 = $('             <div id="vega_6a390ee165124ffe8bc71d6c98a8eab6"></div>             ')[0];
+                popup_78792890f9ee483fa295b2740540f753.setContent(vega_6a390ee165124ffe8bc71d6c98a8eab6);
+            
+
+            regular_polygon_marker_19334943968f44d98fba7c8d9600f69b.bindPopup(popup_78792890f9ee483fa295b2740540f753);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 29", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 5.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 5.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 5.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 4.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 4.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 3.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 1.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 1.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc18c\ud504\ud2b8\uc6e8\uc5b4\uac1c\ubc1c", "val": 0.0}, {"col": "count", "idx": "\ubc18\ub824\ub3d9\ubb3c", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_6a390ee165124ffe8bc71d6c98a8eab6);
+            
+            
+        
+    
+            var regular_polygon_marker_89d2bdba12754462ac8325db79ce06a0 = new L.RegularPolygonMarker(
+                new L.LatLng(37.58592513198213,126.93565724992033),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_83f24a317a944821881004011badf754 = L.popup({maxWidth: '400'});
+
+            
+                var vega_261dce9e7bcb429f9707fc792752bdb5 = $('             <div id="vega_261dce9e7bcb429f9707fc792752bdb5"></div>             ')[0];
+                popup_83f24a317a944821881004011badf754.setContent(vega_261dce9e7bcb429f9707fc792752bdb5);
+            
+
+            regular_polygon_marker_89d2bdba12754462ac8325db79ce06a0.bindPopup(popup_83f24a317a944821881004011badf754);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 39", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 15.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 9.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 4.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 2.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 2.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 2.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 1.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc219\ubc15", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_261dce9e7bcb429f9707fc792752bdb5);
+            
+            
+        
+    
+            var regular_polygon_marker_16bf495f02bd45558a395264fc04a137 = new L.RegularPolygonMarker(
+                new L.LatLng(37.70511562441356,127.05122061102168),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_1cff3c9b610f42eb841c3afb6fb5059b = L.popup({maxWidth: '400'});
+
+            
+                var vega_8c72c8c565f9406da9fc07450e011c07 = $('             <div id="vega_8c72c8c565f9406da9fc07450e011c07"></div>             ')[0];
+                popup_1cff3c9b610f42eb841c3afb6fb5059b.setContent(vega_8c72c8c565f9406da9fc07450e011c07);
+            
+
+            regular_polygon_marker_16bf495f02bd45558a395264fc04a137.bindPopup(popup_1cff3c9b610f42eb841c3afb6fb5059b);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 75", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 19.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 17.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 8.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 6.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 4.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 4.0}, {"col": "count", "idx": "\uc9c0\ud558\ucca0,\uc804\ucca0", "val": 3.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 2.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 2.0}, {"col": "count", "idx": "\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\ubbf8\uc6a9", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 1.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc218\ub9ac,AS", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_8c72c8c565f9406da9fc07450e011c07);
+            
+            
+        
+    
+            var regular_polygon_marker_42415afc8f1c4a14b70be6f86ed58e90 = new L.RegularPolygonMarker(
+                new L.LatLng(37.43612145860147,126.88103352797253),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_34ef45f665c943839848ab2f0e6341d6 = L.popup({maxWidth: '400'});
+
+            
+                var vega_9f75888088164a489d50c1ecd6460268 = $('             <div id="vega_9f75888088164a489d50c1ecd6460268"></div>             ')[0];
+                popup_34ef45f665c943839848ab2f0e6341d6.setContent(vega_9f75888088164a489d50c1ecd6460268);
+            
+
+            regular_polygon_marker_42415afc8f1c4a14b70be6f86ed58e90.bindPopup(popup_34ef45f665c943839848ab2f0e6341d6);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 69", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 22.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 17.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 5.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 4.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 4.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 3.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 2.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 2.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 2.0}, {"col": "count", "idx": "\uc220\uc9d1", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\uad50\uc721,\ud559\ubb38", "val": 1.0}, {"col": "count", "idx": "\ubbf8\uc6a9", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 1.0}, {"col": "count", "idx": "\ud734\ub300\ud3f0", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_9f75888088164a489d50c1ecd6460268);
+            
+            
+        
+    
+            var regular_polygon_marker_0582dae9c24c4dd08c9a8515bb701995 = new L.RegularPolygonMarker(
+                new L.LatLng(37.61645448539978,127.04568903867204),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_dd7987c1dae747c48315628d1ef6003a = L.popup({maxWidth: '400'});
+
+            
+                var vega_9c1622a9145843799d334567bf859ed8 = $('             <div id="vega_9c1622a9145843799d334567bf859ed8"></div>             ')[0];
+                popup_dd7987c1dae747c48315628d1ef6003a.setContent(vega_9c1622a9145843799d334567bf859ed8);
+            
+
+            regular_polygon_marker_0582dae9c24c4dd08c9a8515bb701995.bindPopup(popup_dd7987c1dae747c48315628d1ef6003a);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 68", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 18.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 16.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 7.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 6.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 5.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 3.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 2.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 2.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 2.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\ud328\uc158", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 1.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\uc138\ucc28", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_9c1622a9145843799d334567bf859ed8);
+            
+            
+        
+    
+            var regular_polygon_marker_226390f28def43458d4c25478f8b06d4 = new L.RegularPolygonMarker(
+                new L.LatLng(37.46476093619216,127.02448273058779),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_df6f934d799d4ab99170fc0f0f2b941b = L.popup({maxWidth: '400'});
+
+            
+                var vega_b7c9fd23d33c40c5ab0e60c829475592 = $('             <div id="vega_b7c9fd23d33c40c5ab0e60c829475592"></div>             ')[0];
+                popup_df6f934d799d4ab99170fc0f0f2b941b.setContent(vega_b7c9fd23d33c40c5ab0e60c829475592);
+            
+
+            regular_polygon_marker_226390f28def43458d4c25478f8b06d4.bindPopup(popup_df6f934d799d4ab99170fc0f0f2b941b);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 44", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 12.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 11.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 5.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 3.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 3.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uc9c0\uc6d0,\ub300\ud589", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 1.0}, {"col": "count", "idx": "\ubbf8\uc6a9", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc220\uc9d1", "val": 1.0}, {"col": "count", "idx": "\uc1fc\ud551,\ud3b8\uc758\uc2dc\uc124", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\ub808\ud06c\ub808\uc774\uc158\ud559\uc6d0", "val": 0.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_b7c9fd23d33c40c5ab0e60c829475592);
+            
+            
+        
+    
+            var regular_polygon_marker_33b93e4cd94a4d61b87010b2638d6dea = new L.RegularPolygonMarker(
+                new L.LatLng(37.65065594093791,126.87930218174843),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_56a4b958fd2c4f2dbd4c56760d783ca7 = L.popup({maxWidth: '400'});
+
+            
+                var vega_eea2830a838d4ce797851b0df0ed02db = $('             <div id="vega_eea2830a838d4ce797851b0df0ed02db"></div>             ')[0];
+                popup_56a4b958fd2c4f2dbd4c56760d783ca7.setContent(vega_eea2830a838d4ce797851b0df0ed02db);
+            
+
+            regular_polygon_marker_33b93e4cd94a4d61b87010b2638d6dea.bindPopup(popup_56a4b958fd2c4f2dbd4c56760d783ca7);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 49", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 12.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 10.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 9.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 3.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 2.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 2.0}, {"col": "count", "idx": "\uc790\ub3d9\ucc28\uc815\ube44,\uc218\ub9ac", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 1.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 1.0}, {"col": "count", "idx": "\ub3c4\uc11c\uad00", "val": 1.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 1.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 1.0}, {"col": "count", "idx": "\ubcd1\uc6d0,\uc758\uc6d0", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 1.0}, {"col": "count", "idx": "\uc220\uc9d1", "val": 1.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc1fc\ud551,\ud3b8\uc758\uc2dc\uc124", "val": 0.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_eea2830a838d4ce797851b0df0ed02db);
+            
+            
+        
+    
+            var regular_polygon_marker_e6bde19ad793470ca11790d100a938a7 = new L.RegularPolygonMarker(
+                new L.LatLng(37.60077744013971,126.77089044913588),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_f0aa828baf9848e3ade0b619637e603a = L.popup({maxWidth: '400'});
+
+            
+                var vega_ae329a4fa0c74413bbeffe86593d0923 = $('             <div id="vega_ae329a4fa0c74413bbeffe86593d0923"></div>             ')[0];
+                popup_f0aa828baf9848e3ade0b619637e603a.setContent(vega_ae329a4fa0c74413bbeffe86593d0923);
+            
+
+            regular_polygon_marker_e6bde19ad793470ca11790d100a938a7.bindPopup(popup_f0aa828baf9848e3ade0b619637e603a);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 78", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 18.0}, {"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 17.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 11.0}, {"col": "count", "idx": "\uc5b4\ud559\uc6d0", "val": 5.0}, {"col": "count", "idx": "\uad50\uc2b5\ud559\uc6d0", "val": 4.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 4.0}, {"col": "count", "idx": "\uae08\uc735,\ubcf4\ud5d8", "val": 3.0}, {"col": "count", "idx": "\ud55c\uc2dd", "val": 3.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\uc77c\uc2dd", "val": 2.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 2.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 2.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\ud328\uc158", "val": 1.0}, {"col": "count", "idx": "\uc81c\uc870\uc5c5", "val": 1.0}, {"col": "count", "idx": "\uc11c\ube44\uc2a4,\uc0b0\uc5c5", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_ae329a4fa0c74413bbeffe86593d0923);
+            
+            
+        
+    
+            var regular_polygon_marker_4fab995963fb4079815bdefb8ae15ec4 = new L.RegularPolygonMarker(
+                new L.LatLng(37.627630828579036,127.05626066207513),
+                {
+                    icon : new L.Icon.Default(),
+                    color: 'black',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#3139cc',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 0,
+                    radius: 6
+                    }
+                )
+                .addTo(geo_json_8f845943c6b04ca087e385170f6a8392);
+            
+    
+            var popup_8f12d06d3831432fb0d4552e9f246253 = L.popup({maxWidth: '400'});
+
+            
+                var vega_84429780fab54546b933fc8660421c0f = $('             <div id="vega_84429780fab54546b933fc8660421c0f"></div>             ')[0];
+                popup_8f12d06d3831432fb0d4552e9f246253.setContent(vega_84429780fab54546b933fc8660421c0f);
+            
+
+            regular_polygon_marker_4fab995963fb4079815bdefb8ae15ec4.bindPopup(popup_8f12d06d3831432fb0d4552e9f246253);
+
+            
+                
+            vega_parse({"axes": [{"properties": {"labels": {"align": {"value": "left"}, "angle": {"value": 45}}}, "scale": "x", "title": "", "type": "x"}, {"scale": "y", "title": "Count of Main 20 Category / Total : 76", "type": "y"}], "data": [{"name": "table", "values": [{"col": "count", "idx": "\uc0dd\ud65c,\ud3b8\uc758", "val": 21.0}, {"col": "count", "idx": "\uc74c\uc2dd\uc810", "val": 19.0}, {"col": "count", "idx": "\uc1fc\ud551,\uc720\ud1b5", "val": 12.0}, {"col": "count", "idx": "\uce74\ud398,\ub514\uc800\ud2b8", "val": 10.0}, {"col": "count", "idx": "\uc138\ud0c1", "val": 3.0}, {"col": "count", "idx": "\ubd80\ub3d9\uc0b0", "val": 2.0}, {"col": "count", "idx": "\uc721\ub958,\uace0\uae30\uc694\ub9ac", "val": 2.0}, {"col": "count", "idx": "\uac74\uac15,\uc758\ub8cc", "val": 2.0}, {"col": "count", "idx": "\uad50\ud1b5,\uc6b4\uc218", "val": 1.0}, {"col": "count", "idx": "\uc2dc\uc124,\uac74\ubb3c", "val": 1.0}, {"col": "count", "idx": "\ud328\uc158", "val": 1.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20,\uc624\ub77d", "val": 1.0}, {"col": "count", "idx": "\uc591\uc2dd", "val": 1.0}, {"col": "count", "idx": "\uc218\uc120", "val": 0.0}, {"col": "count", "idx": "\uc124\uacc4,\uc5d4\uc9c0\ub2c8\uc5b4\ub9c1", "val": 0.0}, {"col": "count", "idx": "\ubcf4\ud5d8", "val": 0.0}, {"col": "count", "idx": "\uc2a4\ud3ec\uce20\uc2dc\uc124", "val": 0.0}, {"col": "count", "idx": "\ubd84\uc2dd", "val": 0.0}, {"col": "count", "idx": "\uc0ac\uc9c4,\uc2a4\ud29c\ub514\uc624", "val": 0.0}, {"col": "count", "idx": "\uc0ac\ud68c,\ubcf5\uc9c0", "val": 0.0}]}, {"name": "stats", "source": "table", "transform": [{"keys": ["data.idx"], "type": "facet"}, {"type": "stats", "value": "data.val"}]}], "height": 170, "legends": [], "marks": [{"from": {"data": "table", "transform": [{"keys": ["data.col"], "type": "facet"}, {"height": "data.val", "point": "data.idx", "type": "stack"}]}, "marks": [{"properties": {"enter": {"fill": {"field": "data.col", "scale": "color"}, "width": {"band": true, "offset": -1, "scale": "x"}, "x": {"field": "data.idx", "scale": "x"}, "y": {"field": "y", "scale": "y"}, "y2": {"field": "y2", "scale": "y"}}}, "type": "rect"}], "type": "group"}], "padding": "auto", "scales": [{"domain": {"data": "table", "field": "data.idx"}, "name": "x", "range": "width", "type": "ordinal", "zero": false}, {"domain": {"data": "stats", "field": "sum"}, "name": "y", "nice": true, "range": "height"}, {"domain": {"data": "table", "field": "data.col"}, "name": "color", "range": "category20", "type": "ordinal"}], "width": 300},vega_84429780fab54546b933fc8660421c0f);
+            
+            
+        
+    
+            var layer_control_45bfd3ef3fd14b0a91174c3afcc7a97d = {
+                base_layers : { "openstreetmap" : tile_layer_99842ad61bd4435caccc61435f666361, },
+                overlays : { "dense_medium_area" : geo_json_8f845943c6b04ca087e385170f6a8392, }
+                };
+            L.control.layers(
+                layer_control_45bfd3ef3fd14b0a91174c3afcc7a97d.base_layers,
+                layer_control_45bfd3ef3fd14b0a91174c3afcc7a97d.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_0df092c426ab45989c296143ca7f1258);
+        
+</script>
