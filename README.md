@@ -1,6 +1,6 @@
 # individual_project_20171130 - Present
 
-Please check **Packaged_project**  folder for the finest version of backend scripts
+Please check **packaged_project**  folder for the finest version of backend scripts
 - http://ec2-13-125-106-155.ap-northeast-2.compute.amazonaws.com/
 
 - 현재 추가적으로 보완 중 (자동화)
