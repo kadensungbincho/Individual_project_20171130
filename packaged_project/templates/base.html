@@ -57,9 +57,22 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('contact') }}" >Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}" ><font color='black'>Login</font></a>
-            </li>
+                <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" href="{{ url_for('login') }}" ><font color='black'>Login</font></a>-->
+                <!--</li>-->
+            <!-- Log in/Log out -->
+            {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}" title="Log out">Log Out</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}" title="Log in">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('register') }}" title="Register">Sign Up</a>
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>

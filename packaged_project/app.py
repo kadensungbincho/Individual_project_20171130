@@ -77,15 +77,6 @@ def controler_1(loc_fp, cat_fp, mongo_username, mongo_password, dbname, collecti
             
 ################################### After Mongo DB save ###################################
 
-mongo_hdbscan = {
-          'username': 'kadencho', 
-          'userpassword': 'c98206524', 
-          'dbname': 'testdb', 
-          'collectionname': 'bybrand',
-            'min_cluster_size': 20,
-            'min_samples': 2,
-            'metric': 'haversine'
-                }
 
 def cluster_result_logs(silhouette_score, category, count):
     pass

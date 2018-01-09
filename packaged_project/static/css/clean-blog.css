@@ -288,27 +288,53 @@ header.masthead {
 .floating-label-form-group-with-focus label {
   color: #0085A1; }
 
-#mapTable {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+#map-container .map-nav {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mapTable > div.mapNav > p {
-  align-items: center;
+#map-container .map-nav > p.nav-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-#mapTable > div.mapNav > p > a {
+#map-container .map-nav > li.nav-item {
+  list-style-type: none;
+  text-align: center;
+}
+
+#map-container .map-nav > li.nav-item > a {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
-  text-decoration: none;
+  text-transform: uppercase;
 }
 
-div.map_div, iframe.map_iframe { 
-  align-content: center;
-  height: 700px;
-  width: 1000px;  
-  border: 2px solid grey;
+#map-container .map-div {
+  position: relative;
+  padding-bottom: 70%;
+  height: 0;
+  overflow: hidden;
 }
+
+#map-container .map-div > iframe.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  #map-container .map-div > iframe.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  }
 
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6; }
